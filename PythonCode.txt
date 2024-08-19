@@ -1,0 +1,18 @@
+import yt_dlp
+
+def download_youtube_video(url, save_path):
+    try:
+        ydl_opts = {
+            'outtmpl': save_path + '/%(title)s.%(ext)s',
+            'format': 'best'
+        }
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([url])
+        print("Download completed!")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    video_url = " "  # inside the" "Replace with your video URL
+    download_path = " "  # inside the" "Replace with your path
+    download_youtube_video(video_url, download_path)
