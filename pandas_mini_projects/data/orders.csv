@@ -1,0 +1,7 @@
+order_id,customer_id,product,quantity
+100,1,Widget,2
+101,2,Gizmo,5
+102,1,Gizmo,1
+103,3,Widget,4
+104,4,Gizmo,3
+105,3,Gizmo,2
