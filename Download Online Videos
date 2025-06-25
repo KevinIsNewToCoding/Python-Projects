@@ -1,9 +1,13 @@
 import yt_dlp
+import os
 
 def download_youtube_video(url, save_path):
     try:
+        # Ensure the output directory exists
+        os.makedirs(save_path, exist_ok=True)
+
         ydl_opts = {
-            'outtmpl': save_path + '/%(title)s.%(ext)s',
+            'outtmpl': os.path.join(save_path, '%(title)s.%(ext)s'),
             'format': 'best'
         }
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
