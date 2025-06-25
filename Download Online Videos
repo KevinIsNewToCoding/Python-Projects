@@ -13,6 +13,6 @@ def download_youtube_video(url, save_path):
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    video_url = " "  # inside the" "Replace with your video URL
-    download_path = " "  # inside the" "Replace with your path
+    video_url = ""       # Replace with your video URL
+    download_path = ""   # Replace with your download directory
     download_youtube_video(video_url, download_path)
